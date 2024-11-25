@@ -27,3 +27,11 @@ query.py is a script to submit a quarey to the service
 
 Note: environment is provided using pipenv thourgh Pipfile and Pipfile.lock
 Dockerfile is provided to run the service using Docker
+
+To use the docker setup you will need to:
+1. build the docker container running the following command in the project directory which contains the Dockerfile:
+    docker build -t diabetes_model:latest .
+2. run the docker image with the following command:
+    docker run -p 9696:9696 diabetes_model:latest
+3. then you can use query.py to run a query with the following command:
+    pipenv run python query.py

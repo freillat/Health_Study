@@ -1,7 +1,7 @@
 import pickle
 from flask import Flask, request, jsonify
 
-app = Flask('model') # give an identity to your web service
+app = Flask('predict') # give an identity to your web service
 
 def load(filename: str):
     with open(filename, 'rb') as f_in:
