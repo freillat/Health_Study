@@ -18,14 +18,19 @@ It assumes that it is being run in google colab (https://colab.research.google.c
 
 3. Model Training:
 train.py is the model training (based on selection and parameters tuned in step 2) and the saving of the model file (model.bin) for later use using Pickle
+To run this - you can use: pipenv run python train.py
 
 4. Model deployement:
 predict.py loads of model.bin and serves it to deliver a prediction using Flask
+To run this directly - you can use: pipenv run python predict.py
+Or alternatively the docker setup as described below can be used.
 
 5. Query:
 query.py is a script to submit a quarey to the service
+To run this directly - you can use: pipenv run python predict.py
 
-Note: environment is provided using pipenv thourgh Pipfile and Pipfile.lock
+Notes: environment is provided using pipenv thourgh Pipfile and Pipfile.lock
+model.bin in the repo is the saved output model from running train.py
 Dockerfile is provided to run the service using Docker
 
 To use the docker setup you will need to:
